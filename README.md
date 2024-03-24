@@ -38,7 +38,7 @@ Updates the grade of the student with the first name "Alice" to 97.0.
 Deletes the student with the last name "Smith."
 Fetches and displays all student records from the "students" table.
 
-**Frst i Insert a new student record:**
+**First i Insert a new student record:**
 
 <img width="1426" alt="1" src="https://github.com/sagarjha265/Python-Interview-Tasks/assets/67288575/ae0c6d88-7344-4b95-8668-438974d4bb82">
 
