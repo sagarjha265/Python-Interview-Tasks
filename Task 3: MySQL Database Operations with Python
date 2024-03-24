@@ -1,0 +1,51 @@
+import pypyodbc as odbc
+
+DRIVER_NAME = 'SQL SERVER'
+SERVER_NAME = 'Rajneesh\SQLEXPRESS'
+DATABASE_NAME = 'sagar'
+
+# Connection string
+connection_string = f"DRIVER={{{DRIVER_NAME}}};SERVER={SERVER_NAME};DATABASE={DATABASE_NAME};Trusted_Connection=yes;"
+conn = odbc.connect(connection_string)
+cursor = conn.cursor()
+
+# Check if the table exists
+cursor.execute("SELECT COUNT(*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'students'")
+table_exists = cursor.fetchone()[0]
+
+if not table_exists:
+    # Create students table
+    cursor.execute('''CREATE TABLE students (
+                        student_id INT PRIMARY KEY IDENTITY(1,1),
+                        first_name NVARCHAR(50),
+                        last_name NVARCHAR(50),
+                        age INT,
+                        grade FLOAT
+                    )''')
+
+# first i Insert a new student record
+cursor.execute('''INSERT INTO students (first_name, last_name, age, grade)
+                 VALUES (?, ?, ?, ?)''', ('Alice', 'Smith', 18, 95.5))
+
+# Than i Update the grade of the student with first name "Alice"
+cursor.execute('''UPDATE students
+                  SET grade = ?
+                  WHERE first_name = ?''', (97.0, 'Alice'))
+
+# After update i just Delete the student with last name "Smith" 
+# cursor.execute('''DELETE FROM students
+#                   WHERE last_name = ?''', ('Smith',))
+
+# Commit the changes
+conn.commit()
+
+# Fetch and display all student records
+cursor.execute('''SELECT * FROM students''')
+students = cursor.fetchall()
+
+# Print the fetched records
+for student in students:
+    print(student)
+
+# Close the connection
+conn.close()
