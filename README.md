@@ -9,7 +9,7 @@
 
 Write a Python function calculate_area that takes two parameters: length and width. It should calculate and return the area of a rectangle. However, add a condition: if the length is equal to the width, return "This is a square!" instead of the area.
 
-Case1 : Both len gth and bredth are equal:
+Case1 : Both length and bredth are equal:
 <img width="1426" alt="1" src="https://github.com/sagarjha265/Python-Interview-Tasks/assets/67288575/e73f59fe-3ea5-4f31-bd35-540cc6958abf">
 
 case:2 Both length and bredth are diff:
