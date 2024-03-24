@@ -24,6 +24,7 @@ Write a Python program that generates the Fibonacci sequence up to a specified n
 <img width="1426" alt="1" src="https://github.com/sagarjha265/Python-Interview-Tasks/assets/67288575/9a1b41ba-2efa-4b8b-8f11-7482720d8c3a">
 
 **Task 3: MySQL Database Operations with Python**
+
 Problem Statement:
 Your task is to write a Python program that accomplishes the following:
 First create a database , table and add these column ‘student_id’, ‘first_name’, ‘last_name’, ‘age’, ‘grade’.
@@ -45,7 +46,7 @@ Fetches and displays all student records from the "students" table.
 
 <img width="1426" alt="1" src="https://github.com/sagarjha265/Python-Interview-Tasks/assets/67288575/40f77ad4-7198-44bb-8f1e-df000c5b32ec">
 
-**# After update i just Delete the student with last name "Smith" **
+**After update i just Delete the student with last name "Smith"**
 
 <img width="1426" alt="1" src="https://github.com/sagarjha265/Python-Interview-Tasks/assets/67288575/9955c445-edfd-40d3-810e-a552489b2004">
 
